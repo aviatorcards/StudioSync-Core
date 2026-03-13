@@ -2,12 +2,6 @@
 
 This is a standalone package containing the core ERP modules for the StudioSync suite.
 
-## Installation
-
-```bash
-pip install studiosync-core
-```
-
 ## Included Apps
 
 - **core**: User management, studios, and shared models.
