@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+
+{% block header %}Account Approved!{% endblock %}
+
+{% block content %}
+<div class="greeting">Great news, {{ first_name }}! 🎉</div>
+
+<p>
+    Your account at <strong>{{ site_name }}</strong> has been approved by our team. You can now log in to the student
+    portal and start your musical journey!
+</p>
+
+<div class="info-box">
+    <strong>Your Next Step:</strong> Log in to the dashboard to view your schedule, access resources, and more.
+</div>
+
+<div style="text-align: center">
+    <a href="{{ login_url }}" class="button">Log In Now</a>
+</div>
+
+<p>
+    We're excited to have you with us!
+</p>
+
+<p>
+    If you have any questions or need help finding your way around, don't hesitate to reach out.
+</p>
+{% endblock %}

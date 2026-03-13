@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+
+{% block subheader %}<p>New Lesson Scheduled</p>{% endblock %}
+
+{% block content %}
+<div class="greeting">Hi {{ recipient_name }},</div>
+
+<p>A new lesson has been scheduled in your calendar.</p>
+
+<div class="alert-box">
+    <strong>⏰ Time:</strong> {{ lesson_start_time }}<br>
+    <strong>📍 Location:</strong> {{ location|default:"Main Studio" }}
+</div>
+
+<h3>Lesson Details:</h3>
+<ul>
+    <li><strong>Student:</strong> {{ student_name }}</li>
+    <li><strong>Instructor:</strong> {{ instructor_name }}</li>
+    <li><strong>Instrument:</strong> {{ instrument }}</li>
+    <li><strong>Duration:</strong> {{ duration_minutes }} minutes</li>
+</ul>
+
+<div style="text-align: center;">
+    <a href="{{ lesson_url }}" class="button">View Lesson on Dashboard</a>
+</div>
+
+<p>If you have any questions, please contact the studio.</p>
+{% endblock %}

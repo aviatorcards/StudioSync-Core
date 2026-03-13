@@ -1,0 +1,28 @@
+{% extends "emails/base.html" %}
+
+{% block header %}New Student Registration{% endblock %}
+
+{% block content %}
+<div class="greeting">Hello Admin! 🚀</div>
+
+<p>
+    A new student has registered on the website and is waiting for your approval.
+</p>
+
+<div class="info-box">
+    <strong>Student Name:</strong> {{ student_name }}<br />
+    <strong>Email Address:</strong> {{ student_email }}<br />
+</div>
+
+<p>
+    Please review the registration and approve or assign them to an instructor in the user management portal.
+</p>
+
+<div style="text-align: center">
+    <a href="{{ dashboard_url }}" class="button">Go to User Management</a>
+</div>
+
+<p>
+    <em>This is an automated notification from your StudioSync dashboard.</em>
+</p>
+{% endblock %}

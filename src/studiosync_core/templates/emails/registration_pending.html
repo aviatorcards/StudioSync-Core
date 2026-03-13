@@ -1,0 +1,26 @@
+{% extends "emails/base.html" %}
+
+{% block header %}Registration Received{% endblock %}
+
+{% block content %}
+<div class="greeting">Hello {{ first_name }}! 👋</div>
+
+<p>
+    Thank you for registering an account with <strong>{{ site_name }}</strong>. We've received your application and it's
+    currently pending review.
+</p>
+
+<div class="info-box">
+    <strong>Status:</strong> Pending Approval<br />
+    <strong>What happens next?</strong> An instructor or administrator will review your account. You'll receive another
+    email once your account has been approved and you're ready to log in.
+</div>
+
+<p>
+    In the meantime, feel free to gather your musical materials and get ready for your first lesson!
+</p>
+
+<p>
+    If you have any urgent questions, please reply to this email or contact us through our website.
+</p>
+{% endblock %}

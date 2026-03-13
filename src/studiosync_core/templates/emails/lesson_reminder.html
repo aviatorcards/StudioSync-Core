@@ -1,0 +1,25 @@
+{% extends "emails/base.html" %}
+
+{% block subheader %}<p>Lesson Reminder</p>{% endblock %}
+
+{% block content %}
+<div class="greeting">Upcoming Lesson with {{ instructor_name }}</div>
+
+<div class="alert-box">
+    <strong>⏰ Time:</strong> {{ lesson_start_time }}<br>
+    <strong>📍 Location:</strong> {{ location|default:"Main Studio" }}
+</div>
+
+<h3>Lesson Details:</h3>
+<ul>
+    <li><strong>Student:</strong> {{ student_name }}</li>
+    <li><strong>Instrument:</strong> {{ instrument }}</li>
+    <li><strong>Duration:</strong> {{ duration_minutes }} minutes</li>
+</ul>
+
+<div style="text-align: center;">
+    <a href="{{ lesson_url }}" class="button">View Lesson Details</a>
+</div>
+
+<p>Need to reschedule? Please contact your instructor as soon as possible.</p>
+{% endblock %}
